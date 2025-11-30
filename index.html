@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="<%= BASE_URL %>favicon.ico">
+    
+    <title>Plateforme de Gestion des Stages Médicaux - Wilaya de Boumerdès</title>
+    
+    <!-- Meta Tags -->
+    <meta name="description" content="Plateforme centralisée de gestion des stages médicaux pour la Wilaya de Boumerdès">
+    <meta name="keywords" content="stages, médecine, étudiants, hôpitaux, Boumerdès, Algérie">
+    <meta name="author" content="Faculté de Médecine - Université de Boumerdès">
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Plateforme de Gestion des Stages Médicaux">
+    <meta property="og:description" content="Gestion centralisée des stages médicaux pour la Wilaya de Boumerdès">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="fr_FR">
+    
+    <!-- Preload Critical Resources -->
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- FullCalendar CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.10.2/fullcalendar.min.css">
+    
+    <!-- Additional CSS Libraries -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    
+    <!-- Theme Color for Mobile Browsers -->
+    <meta name="theme-color" content="#2a7a5c">
+    <meta name="msapplication-navbutton-color" content="#2a7a5c">
+    <meta name="apple-mobile-web-app-status-bar-style" content="#2a7a5c">
+    
+    <!-- PWA Manifest -->
+    <link rel="manifest" href="<%= BASE_URL %>manifest.json">
+    
+    <!-- iOS Meta Tags -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <meta name="apple-mobile-web-app-title" content="StagesMédicaux">
+    
+    <!-- Windows Meta Tags -->
+    <meta name="msapplication-TileColor" content="#2a7a5c">
+    <meta name="msapplication-TileImage" content="<%= BASE_URL %>icons/icon-144x144.png">
+    
+    <!-- Preload Critical Fonts -->
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" as="style">
+    
+    <!-- Inline Critical CSS -->
+    <style>
+        /* Critical CSS for initial loading */
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f5f7fa;
+            color: #333;
+        }
+        
+        #app {
+            min-height: 100vh;
+        }
+        
+        .loading-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background: linear-gradient(135deg, #2a7a5c 0%, #1e5e46 100%);
+            color: white;
+        }
+        
+        .loading-spinner {
+            width: 50px;
+            height: 50px;
+            border: 4px solid rgba(255, 255, 255, 0.3);
+            border-top: 4px solid white;
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+        }
+        
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+        
+        .loading-text {
+            margin-top: 20px;
+            font-size: 18px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <noscript>
+        <div style="text-align: center; padding: 50px; font-family: Arial, sans-serif;">
+            <h1>JavaScript Requis</h1>
+            <p>Cette application nécessite JavaScript pour fonctionner correctement.</p>
+            <p>Veuillez activer JavaScript dans votre navigateur et rafraîchir la page.</p>
+        </div>
+    </noscript>
+    
+    <div id="app">
+        <!-- Loading screen shown until Vue app mounts -->
+        <div class="loading-container">
+            <div class="loading-content">
+                <div class="loading-spinner"></div>
+                <div class="loading-text">
+                    <h2>StagesMédicaux</h2>
+                    <p>Chargement de l'application...</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- External JavaScript Libraries -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/locale/fr.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.10.2/fullcalendar.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.10.2/locale/fr.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.3.2/papaparse.min.js"></script>
+    
+    <!-- Built files will be auto injected -->
+</body>
+</html>
